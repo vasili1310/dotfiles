@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cd ~
+# cd ~
 
-git clone https://github.com/vasili1310/dotfiles.git
+# git clone https://github.com/vasili1310/dotfiles.git
 
 # Wallpapers
 mkdir -p ~/Pictures/wallpapers/
