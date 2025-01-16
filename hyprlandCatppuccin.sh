@@ -6,7 +6,7 @@
 
 # Wallpapers
 mkdir -p ~/Pictures/wallpapers/
-sudo cp -r ~/.dotfiles/wallpapers/* ~/Pictures/wallpapers/
+sudo cp -r ~/dotfiles/wallpapers/* ~/Pictures/wallpapers/
 
 # Source files
 mkdir -p ~/.config/hypr/
@@ -30,12 +30,12 @@ sudo cp -r ~/dotfiles/.config/waybar/* ~/.config/waybar/
 # rofi config
 mkdir -p ~/.config/rofi/
 sudo rm -rf ~/.config/rofi/*
-sudo cp -r ~/.dotfiles/.config/rofi/* ~/.config/rofi/
+sudo cp -r ~/dotfiles/.config/rofi/* ~/.config/rofi/
 
 # nvim
 mkdir -p ~/.config/nvim/
 sudo rm -rf ~/.config/nvim/*
-sudo cp -r ~/.dotfiles/.config/nvim/* ~/.config/nvim/
+sudo cp -r ~/dotfiles/.config/nvim/* ~/.config/nvim/
 
 # Starship
 curl -sS https://starship.rs/install.sh | sh
