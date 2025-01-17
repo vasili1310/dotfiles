@@ -7,8 +7,8 @@ Minimalistic dotfiles for [Hyprland](https://github.com/hyprwm/Hyprland), based 
 3. **Performance Tweaks**: Optimized settings for smooth animations and low system resource usage.
 4. **Integration**: Seamless compatibility with popular Wayland applications and tools.
 5. **Modules**:
-  **Bar/Panel**: Configuration for [Waybar](https://github.com/Alexays/Waybar) based on [Typecraft](https://github.com/typecraft-dev/dotfiles/tree/master/waybar/.config/waybar)'s waybar.
-  **Launchers**: Configuration for [Rofi](https://github.com/davatorium/rofi) application launcher.
+  - **Bar/Panel**: Configuration for [Waybar](https://github.com/Alexays/Waybar) based on [Typecraft](https://github.com/typecraft-dev/dotfiles/tree/master/waybar/.config/waybar)'s waybar.
+  - **Launchers**: Configuration for [Rofi](https://github.com/davatorium/rofi) application launcher.
 
 ## Screenshots 📸
 
