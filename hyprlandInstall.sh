@@ -218,6 +218,10 @@ sudo cp ~/dotfiles/.config/starship/starship.toml ~/.config/
 
 echo "Configuration successfully installed!"
 
+#####
+chmod +x setWallpaper.sh
+#####
+
 sleepyFunc
 
 clear
