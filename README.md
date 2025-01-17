@@ -2,11 +2,11 @@
 Minimalistic dotfiles for [Hyprland](https://github.com/hyprwm/Hyprland), based on the [Catppuccin](https://github.com/catppuccin/catppuccin) mocha theme.
 
 ## Features 🤩
-**Custom keybindings**:Intuitive shortcuts for efficient navigation and window management.
-**Theme and Appearance**: A modern, minimalistic aesthetic based on the pastel purple colors of Catppuccin mocha.
-**Performance Tweaks**: Optimized settings for smooth animations and low system resource usage.
-**Integration**: Seamless compatibility with popular Wayland applications and tools.
-**Modules**:
+1. **Custom keybindings**:Intuitive shortcuts for efficient navigation and window management.
+2. **Theme and Appearance**: A modern, minimalistic aesthetic based on the pastel purple colors of Catppuccin mocha.
+3. **Performance Tweaks**: Optimized settings for smooth animations and low system resource usage.
+4. **Integration**: Seamless compatibility with popular Wayland applications and tools.
+5. **Modules**:
   **Bar/Panel**: Configuration for [Waybar](https://github.com/Alexays/Waybar) based on [Typecraft](https://github.com/typecraft-dev/dotfiles/tree/master/waybar/.config/waybar)'s waybar.
   **Launchers**: Configuration for [Rofi](https://github.com/davatorium/rofi) application launcher.
 
