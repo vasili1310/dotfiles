@@ -211,6 +211,8 @@ sudo cp -r ~/dotfiles/.config/nvim/* ~/.config/nvim/
 curl -sS https://starship.rs/install.sh | sh
 LINE_TO_ADD='eval "$(starship init bash)"'
 echo "$LINE_TO_ADD" >> ~/.bashrc
+sudo rm ~/.config/starship.toml
+sudo cp ~/dotfiles/.config/starship/starship.toml ~/.config/
 
 #####
 
