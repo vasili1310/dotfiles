@@ -35,7 +35,7 @@ sleepyFunc
 #####
 
 yay -S --noconfirm pfetch brave-bin zed vscode wps-office pavucontrol easyeffects obs-studio v4l2loopback-dkms whatsie spotify jetbrains-toolbox wakeonlan orchis-theme-git nwg-look github-desktop
-sudo pacman -S blueman
+sudo pacman -S --noconfirm blueman zsh
 
 #####
 
@@ -207,12 +207,72 @@ mkdir -p ~/.config/nvim/
 sudo rm -rf ~/.config/nvim/*
 sudo cp -r ~/dotfiles/.config/nvim/* ~/.config/nvim/
 
-# Starship
-curl -sS https://starship.rs/install.sh | sh
-LINE_TO_ADD='eval "$(starship init bash)"'
-echo "$LINE_TO_ADD" >> ~/.bashrc
-sudo rm ~/.config/starship.toml
-sudo cp ~/dotfiles/.config/starship/starship.toml ~/.config/
+clear
+
+# Zsh
+echo "Installing zsh and plugins..."
+sleepyFunc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Plugins
+# Define plugin repositories and their destination paths
+ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
+PLUGINS=(
+  "https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions"
+  "https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting"
+)
+
+# Function to clone plugins
+echo "Cloning Zsh plugins..."
+for PLUGIN in "${PLUGINS[@]}"; do
+  REPO=$(echo "$PLUGIN" | awk '{print $1}')
+  DEST=$(echo "$PLUGIN" | awk '{print $2}')
+  
+  if [ -d "$DEST" ]; then
+    echo "Plugin already exists: $DEST. Skipping..."
+  else
+    git clone "$REPO" "$DEST" && echo "Cloned $REPO to $DEST"
+  fi
+done
+
+# Update ~/.zshrc to include plugins
+echo "Updating ~/.zshrc..."
+ZSHRC=~/.zshrc
+if ! grep -q "plugins=(" "$ZSHRC"; then
+  echo "plugins=()" >> "$ZSHRC"
+fi
+
+# Ensure plugins are added to ~/.zshrc
+sed -i '/^plugins=/c\plugins=(git zsh-autosuggestions zsh-syntax-highlighting)' "$ZSHRC"
+
+# Add sourcing lines if not already present
+if ! grep -q "zsh-autosuggestions/zsh-autosuggestions.zsh" "$ZSHRC"; then
+  echo "source ${ZSH_CUSTOM}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> "$ZSHRC"
+fi
+
+if ! grep -q "zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" "$ZSHRC"; then
+  echo "source ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$ZSHRC"
+fi
+
+# Install Starship Prompt
+echo "Installing Starship Prompt..."
+if ! command -v starship &> /dev/null; then
+  curl -sS https://starship.rs/install.sh | sh -s -- -y
+else
+  echo "Starship is already installed."
+fi
+
+# Add Starship configuration to ~/.zshrc
+if ! grep -q "eval \"\$(starship init zsh)\"" "$ZSHRC"; then
+  echo "" >> "$ZSHRC"
+  echo "# Load Starship Prompt" >> "$ZSHRC"
+  echo "eval \"\$(starship init zsh)\"" >> "$ZSHRC"
+fi
+
+# Reload .zshrc
+echo "Reloading ~/.zshrc..."
+source "$ZSHRC"
+
+echo "Zsh plugin setup complete!"
 
 #####
 
