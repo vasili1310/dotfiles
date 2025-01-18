@@ -1,0 +1,28 @@
+CHEATSHEET
+
+--> Keybinds
+--> SUPER = Windows / Cmd key <--
+
+SUPER + . : Open this cheatsheet
+
+--> Essential
+SUPER + T    : Open kitty (terminal)
+SUPER + R    : Open rofi (app menu)
+SUPER + E    : Open nemo (file manager)
+SUPER + Q    : Close active app
+SUPER + M    : Quit Hyprland
+SUPER + F    : Toggle floating / fullscreen for active app
+SUPER + L    : Lock screen
+SUPER + T    : Change wallpaper
+
+--> Workspaces
+SUPER + (1 -> 9)                        : Move to workspace (1 -> 9)
+SUPER + ARROW                           : Move window focus in arrow direction
+SUPER + CTRL + ARROW                    : Move window in arrow direction
+SUPER + SHIFT + (1 -> 9)                : Move window to workspace (1 -> 9)
+SUPER + SHIFT + ARROW (left / right)    : Move to workspace left / right
+SUPER + S                               : Move to special workspace
+SUPER + SCROLL                          : Move through active workspaces
+SUPER + LCLICK                          : Move active window
+SUPER + RCLICK (at window edge)         : Resize floating window
+
