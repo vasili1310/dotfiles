@@ -224,9 +224,21 @@ sudo chmod +x setWallpaper.sh
 #####
 
 # Nvim clipboard setup
+echo "Setting up Nvim clipboard..."
 sudo mkdir -p ~/.local/bin/
 sudo mv ~/dotfiles/wl-clipboard-wrapper ~/.local.bin/
 sudo chmod +x ~/.local/bin/wl-clipboard-wrapper
+echo "Done!"
+
+sleepyFunc
+
+clear
+
+# V4l2loopback
+echo "Addind the v4l2loopback.service file for screen recording..."
+sudo cp ~/dotfiles/v4l2loopback.service /etc/systemd/system/
+sudo systemctl enable v4l2loopback.service
+echo "Done!"
 
 sleepyFunc
 
