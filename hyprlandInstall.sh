@@ -82,7 +82,7 @@ sleepyFunc
 #####
 
 sudo pacman -S --noconfirm hyprland waybar zenity 
-yay -S --noconfirm kitty wofi hyprshot swaync nemo hyprpaper playerctl getnf rofi hyprlock wl-clipboard
+yay -S --noconfirm kitty wofi hyprshot swaync nemo hyprpaper playerctl getnf rofi hyprlock wl-clipboard clipman
 
 #####
 
