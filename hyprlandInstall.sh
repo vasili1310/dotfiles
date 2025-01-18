@@ -246,7 +246,7 @@ clear
 
 echo "Everything is done! You can now reboot your system."
 printf "\n"
-echo "Make sure to open 'nwg-look' after rebooting and selecting the 'Orchis-Purple-Dark' Theme."
+echo "Make sure to open 'nwg-look' ('GTK Settings') after rebooting (or right now) and selecting the 'Orchis-Purple-Dark' Theme."
 printf "\n"
 echo "Thanks for installing! <3"
 
