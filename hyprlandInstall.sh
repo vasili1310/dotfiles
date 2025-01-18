@@ -9,9 +9,6 @@ clear
 
 echo "Starting Hyprland download!"
 
-# Hyprland Install + Config
-# bash <(curl -s "https://end-4.github.io/dots-hyprland-wiki/setup.sh")
-
 # Installing yay
 echo "Installing yay..."
 sleepyFunc
@@ -78,64 +75,6 @@ sleepyFunc
 
 clear
 
-# Quick Update
-echo "Updating the system before installing BlackArch..."
-sleepyFunc
-
-#####
-
-yay -Syu --noconfirm
-
-#####
-
-printf "\n"
-echo "Update complete!"
-sleepyFunc
-
-clear
-
-# BlackArch
-echo "Installing BlackArch..."
-sleepyFunc
-
-#####
-
-curl -O https://blackarch.org/strap.sh
-echo bbf0a0b838aed0ec05fff2d375dd17591cbdf8aa strap.sh | sha1sum -c
-chmod +x strap.sh
-sudo ./strap.sh
-sudo pacman -Syu --noconfirm
-
-#####
-
-printf "\n"
-echo "BlackArch successfully installed!"
-sleepyFunc
-
-clear
-
-#BlackArch Packages
-echo "Installing BlackArch packages for pentesting..."
-sleepyFunc
-
-#####
-
-sudo pacman -S --noconfirm blackarch-decompiler blackarch-debugger blackarch-reversing blackarch-networking blackarch-disassembler blackarch-webapp
-
-#####
-
-printf "\n"
-echo "Blackarch packages successfully installed!"
-sleepyFunc
-
-clear
-
-# JetBrains
-# mkdir JetBrains
-# cd JetBrains
-# wget https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux
-# cd ..
-
 # Hyprland
 echo "Installing Hyprland and tools..."
 sleepyFunc
@@ -143,7 +82,7 @@ sleepyFunc
 #####
 
 sudo pacman -S --noconfirm hyprland waybar zenity 
-yay -S --noconfirm kitty wofi hyprshot swaync nemo hyprpaper playerctl getnf rofi
+yay -S --noconfirm kitty wofi hyprshot swaync nemo hyprpaper playerctl getnf rofi hyprlock
 
 #####
 
@@ -279,15 +218,18 @@ echo "Zsh plugin setup complete!"
 echo "Configuration successfully installed!"
 
 #####
-chmod +x setWallpaper.sh
+
+sudo chmod +x setWallpaper.sh
+
 #####
 
 sleepyFunc
 
 clear
 
-# echo "Make sure to add 'exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP' in your '~/.config/hypr/hyprland.conf' (after rebooting into Hyprland) for Screen Sharing!"
-
-# sleepyFunc
-
 echo "Everything is done! You can now reboot your system."
+printf "\n"
+echo "Make sure to open 'nwg-look' after rebooting and selecting the 'Orchid-Purple-Dark' Theme."
+printf "\n"
+echo "Thanks for installing! <3"
+
