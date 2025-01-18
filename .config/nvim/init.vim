@@ -17,3 +17,19 @@ colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchia
 set number
 
 set relativenumber
+
+set clipboard+=unnamedplus
+
+let g:clipboard = {
+      \   'name': 'wl-clipboard',
+      \   'copy': {
+      \      '+': 'wl-copy',
+      \      '*': 'wl-copy',
+      \    },
+      \   'paste': {
+      \      '+': 'wl-paste',
+      \      '*': 'wl-paste',
+      \   },
+      \   'cache_enabled': 1,
+      \ }
+
