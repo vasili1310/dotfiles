@@ -216,8 +216,6 @@ echo "Zsh plugin setup complete!"
 
 # Cheatsheet
 sudo mv ~/dotfiles/cheatsheet ~/.config/hypr/
-sudo mv ~/dotfiles/cheatsheet.sh ~/.config/hypr/
-sudo chmod +x ~/.config/hypr/cheatsheet.sh
 
 #####
 
