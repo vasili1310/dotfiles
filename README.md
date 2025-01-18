@@ -30,7 +30,7 @@ Follow these steps to install and apply this Hyprland configuration.
 
 ### 1. Auto install with one command
 ```
-cd ~ && git clone https://github.com/vasili1310/dotfiles && cd dotfiles && sudo chmod +x hyprlandInstall.sh && bash hyprlandInstall.sh
+sudo pacman -S --noconfirm git && cd ~ && git clone https://github.com/vasili1310/dotfiles && cd dotfiles && sudo chmod +x hyprlandInstall.sh && bash hyprlandInstall.sh
 ```
 
 ### 2. Auto install with multiple commands
