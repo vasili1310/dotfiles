@@ -229,7 +229,7 @@ clear
 
 echo "Everything is done! You can now reboot your system."
 printf "\n"
-echo "Make sure to open 'nwg-look' after rebooting and selecting the 'Orchid-Purple-Dark' Theme."
+echo "Make sure to open 'nwg-look' after rebooting and selecting the 'Orchis-Purple-Dark' Theme."
 printf "\n"
 echo "Thanks for installing! <3"
 
