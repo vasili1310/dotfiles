@@ -223,6 +223,11 @@ sudo chmod +x setWallpaper.sh
 
 #####
 
+# Nvim clipboard setup
+sudo mkdir -p ~/.local/bin/
+sudo mv ~/dotfiles/wl-clipboard-wrapper ~/.local.bin/
+sudo chmod +x ~/.local/bin/wl-clipboard-wrapper
+
 sleepyFunc
 
 clear
