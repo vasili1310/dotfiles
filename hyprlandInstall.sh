@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Added for better readability during installation
 sleepyFunc() {
 	printf "\n"
 	sleep 3
