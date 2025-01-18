@@ -252,5 +252,6 @@ echo "Everything is done! You can now reboot your system."
 printf "\n"
 echo "Make sure to open 'nwg-look' ('GTK Settings') after rebooting (or right now) and selecting the 'Orchis-Purple-Dark' Theme."
 printf "\n"
+echo "After rebooting, you can use SUPER (Windows key) + F12 to open the cheatsheet."
 echo "Thanks for installing! <3"
 
