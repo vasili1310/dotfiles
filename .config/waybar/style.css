@@ -85,6 +85,16 @@ button:hover {
     border-bottom: 2px solid @mauve;
 }
 
+#cpu {
+    color: @green;
+    border-bottom: 2px solid @green
+}
+
+#memory {
+    color: @green;
+    border-bottom: 2px solid @green
+}
+
 #pulseaudio {
     color: @blue;
     border-bottom: 2px solid @blue;
