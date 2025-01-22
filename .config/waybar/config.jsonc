@@ -36,5 +36,17 @@
           "default": ["", "", " "]
       },
       "on-click": "pavucontrol"
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "  {}%",
+    "max-length": 10
+    // "format": "{icon0}", //{icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
+    // "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+  },
+  "memory": {
+    "interval": 50,
+    "format": "  {}%",
+    "max-length": 10
   }
 }
