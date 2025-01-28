@@ -67,7 +67,7 @@ sleepyFunc
 #####
 
 sudo pacman -S pipewire wireplumber
-yay -S xdg-desktop-portal-hyprland-git
+yay -S --noconfirm xdg-desktop-portal-hyprland-git
 
 #####
 
