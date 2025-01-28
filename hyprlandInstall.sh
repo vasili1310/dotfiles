@@ -26,6 +26,23 @@ sleepyFunc
 
 clear
 
+# Hyprland
+echo "Installing Hyprland and tools..."
+sleepyFunc
+
+#####
+
+sudo pacman -S --noconfirm waybar zenity 
+yay -S --noconfirm hyprland-git kitty wofi hyprshot swaync nemo hyprpaper playerctl getnf rofi hyprlock wl-clipboard clipman
+
+#####
+
+printf "\n"
+echo "Hyprland and tools successfully installed!"
+sleepyFunc
+
+clear
+
 # Packages
 echo "Installing useful packages..."
 sleepyFunc
@@ -72,23 +89,6 @@ sudo pacman -S --noconfirm steam discord
 
 printf "\n"
 echo "Gaming packages successfully installed!"
-sleepyFunc
-
-clear
-
-# Hyprland
-echo "Installing Hyprland and tools..."
-sleepyFunc
-
-#####
-
-sudo pacman -S --noconfirm waybar zenity 
-yay -S --noconfirm hyprland-git kitty wofi hyprshot swaync nemo hyprpaper playerctl getnf rofi hyprlock wl-clipboard clipman
-
-#####
-
-printf "\n"
-echo "Hyprland and tools successfully installed!"
 sleepyFunc
 
 clear
