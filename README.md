@@ -19,9 +19,8 @@ Minimalistic dotfiles for [Hyprland](https://github.com/hyprwm/Hyprland), based 
 
 Please read the following before proceeding with the installation:
 
-1. **Backup your files in ~/.config, as the script will delete files to add the new ones.**
-2. **The script was designed for Arch / Arch-based Linux distros, it will not work on any non-Arch distro.**
-3. **This script is still a work in progress, you might encounter errors / bugs / glitches.**
+1. **The script was designed for Arch / Arch-based Linux distros, it will not work on any non-Arch distro.**
+2. **This script is still a work in progress, you might encounter errors / bugs / glitches.**
 
 With that out of the way, let's continue.
 
