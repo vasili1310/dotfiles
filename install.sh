@@ -74,7 +74,7 @@ sudo chmod +x ~/dotfiles/scripts/setWallpaper.sh
 echo "Adding wallpapers"
 sleep 3
 mkdir Pictures
-sudo cp ~/dotfiles/wallpapers/* ~/Pictures/
+sudo cp -r ~/dotfiles/wallpapers/ ~/Pictures/
 echo "Done."
 clear
 
