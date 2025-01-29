@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install_packages() {
-    sudo pacman -S --noconfirm waybar zenity blueman zsh neovim discord
+    sudo pacman -S --noconfirm git waybar zenity blueman zsh neovim discord
     yay -S --noconfirm kitty wofi hyprshot swaync nemo hyprpaper playerctl getnf rofi hyprlock wl-clipboard clipman zed visual-studio-code-bin pavucontrol easyeffects spotify orchis-theme-git nwg-look
     yay -Syu --noconfirm # Update all packages
 }
@@ -10,7 +10,6 @@ clear
 
 echo "Installing the catppuccin mocha config for Hyprland..."
 sleep 3
-
 
 echo "Checking if yay is installed..."
 sleep 3
@@ -42,13 +41,27 @@ if [ $? -ne 0 ]; then
         esac
     done
 else
-    echo "Done"
+    echo "Done."
 fi
 sleep 3
-clear 
+clear
 
+echo "Cloning the GitHub repository..."
+sleep 3
+cd $HOME
+git clone https://github.com/vasili1310/dotfiles
+cd dotfiles
+echo "Done."
+sleep 3
+clear
+
+echo "Downloading fonts..."
+sleep 3
 getnf -i JetBrainsMono
 getnf -i Inconsolata
+echo "Done."
+sleep 3
+clear
 
 sudo chmod +x ~/dotfiles/config.sh
 source $HOME/dotfiles/scripts/config.sh
