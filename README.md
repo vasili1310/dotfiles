@@ -29,17 +29,8 @@ Follow these steps to install and apply this Hyprland configuration.
 
 ### 1. Auto install with one command
 ```
-sudo pacman -S --noconfirm git && cd ~ && git clone https://github.com/vasili1310/dotfiles && cd dotfiles && sudo chmod +x hyprlandInstall.sh && bash hyprlandInstall.sh
+bash <(curl -s "https://raw.githubusercontent.com/vasili1310/dotfiles/main/install.sh")
 ```
 
-### 2. Auto install with multiple commands
-```
-cd ~
-git clone https://github.com/vasili1310/dotfiles
-cd dotfiles
-sudo chmod +x hyprlandInstall.sh
-bash hyprlandInstall.sh
-```
-
-### 3. Manual install
+### 2. Manual install
 Download the appropriate folders from .config and manually place them in your ~/.config/ directory.
