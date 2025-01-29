@@ -50,10 +50,10 @@ clear
 getnf -i JetBrainsMono
 getnf -i Inconsolata
 
-sudo chmod +x ~/dotfiles/config.sh
+sudo chmod +x ~/dotfiles/scripts/config.sh
 source $HOME/dotfiles/scripts/config.sh
 
-sudo chmod +x ~/dotfiles/plugins.sh
+sudo chmod +x ~/dotfiles/scripts/plugins.sh
 source $HOME/dotfiles/scripts/plugins.sh
 
 sudo chmod +x ~/dotfiles/scripts/setWallpaper.sh
