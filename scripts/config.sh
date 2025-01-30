@@ -25,7 +25,7 @@ while true; do
 done
 
 # Array of directories to check
-directories=("hypr" "kitty" "waybar" "rofi" "nvim") 
+directories=("hypr" "kitty" "waybar" "rofi" "nvim" "swaync") 
 
 for dir in "${directories[@]}"; do
     dir_path="$HOME/.config/$dir"
