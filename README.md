@@ -11,9 +11,13 @@ Minimalistic dotfiles for [Hyprland](https://github.com/hyprwm/Hyprland), based 
   - **Launchers**: Configuration for [Rofi](https://github.com/davatorium/rofi) application launcher.
 
 ## Screenshots 📸
+## [Typecraft](https://github.com/typecraft-dev/dotfiles/tree/master/waybar/.config/waybar)'s waybar
 ![Screenshot 1](screenshots/screenshot1.png)
 ![Screenshot 2](screenshots/screenshot2.png)
 ![Screenshot 3](screenshots/screenshot3.png)
+
+## [Catppuccin](https://github.com/catppuccin/catppuccin) waybar
+![Screenshot 4](screenshots/screenshot4.png)
 
 ## Warning ⚠️
 
