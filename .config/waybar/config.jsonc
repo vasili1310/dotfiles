@@ -1,52 +1,80 @@
 {
-  "position": "top",
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
-  "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["hyprland/workspaces", "memory", "cpu"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray", "custom/lock", "custom/power"],
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": 10
+        },
+        "format": "{icon}",
+	"on-click": "activate",
+        "format-icons": {
+   	 	"urgent": "",
+  	        "active": "",
+  	        "default": ""
+        }
     },
-    "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
-    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
-    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
-    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
-    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip-format": "{time}"
-  },
-  "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰊗 </span>Connected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
-  },
-  "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-muted": "",
-      "format-icons": {
-          "default": ["", "", " "]
-      },
-      "on-click": "pavucontrol"
-  },
-  "cpu": {
-    "interval": 5,
-    "format": "  {}%",
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%)  ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
+    "format-disconnected": "Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+    "tooltip-format-ethernet": "{ifname}  ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+    },
+    "memory": {
+    "interval": 3,
+    "format": "{}%  ",
     "max-length": 10
-    // "format": "{icon0}", //{icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
-    // "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-  },
-  "memory": {
-    "interval": 50,
-    "format": "  {}%",
+    },
+    "cpu": {
+    "interval": 3,
+    "format": "{}%  ",
     "max-length": 10
-  }
+    },
+    "battery": {
+    "bat": "BAT0",
+    "interval": 3,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "max-length": 25
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Europe/Athens",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": " {:%d/%m/%Y}",
+        "format": "  {:%H:%M}"
+    },
+    "custom/lock": {
+        "tooltip": "Lock the computer",
+        "on-click": "hyprlock &",
+        "format": ""
+    },
+    "custom/power": {
+        "tooltip": "Reboot the computer",
+        "on-click": "reboot",
+        "format": "⏻"
+    }
 }
