@@ -26,4 +26,5 @@ esac
 '
 
 pkill -USR1 waybar
+sleep 1
 waybar &
