@@ -3,7 +3,7 @@ CHEATSHEET
 --> Keybinds
 --> SUPER = Windows / Cmd key <--
 
-SUPER + . : Open this cheatsheet
+SUPER + F12 : Open this cheatsheet
 
 --> Essential
 SUPER + T    : Open kitty (terminal)
