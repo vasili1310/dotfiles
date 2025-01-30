@@ -31,6 +31,8 @@ With that out of the way, let's continue.
 ## Installation 🛠️
 Follow these steps to install and apply this Hyprland configuration.
 
+## Make sure you already have hyprland / hyprland-git installed (I recommend hyprland-git). You can install it with ```yay -S hyprland-git```.
+
 ### 1. Auto install with one command
 ```
 bash <(curl -s "https://raw.githubusercontent.com/vasili1310/dotfiles/main/install.sh")
