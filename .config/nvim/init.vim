@@ -9,6 +9,12 @@ call plug#begin()
 " List your plugins here
 Plug 'tpope/vim-sensible'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'preservim/nerdtree'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'liuchengxu/vim-which-key'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'rbgrouleff/bclose.vim'
 
 call plug#end()
 
@@ -33,3 +39,4 @@ let g:clipboard = {
       \   'cache_enabled': 1,
       \ }
 
+source ~/.config/nvim/keybinds.vim
