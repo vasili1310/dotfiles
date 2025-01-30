@@ -2,7 +2,7 @@
 
 install_packages() {
     sudo pacman -S --noconfirm git waybar zenity blueman zsh neovim discord
-    yay -S --noconfirm kitty wofi hyprshot swaync nemo hyprpaper playerctl getnf rofi hyprlock wl-clipboard clipman zed visual-studio-code-bin pavucontrol easyeffects spotify orchis-theme-git nwg-look swaync hyprpolkitagent
+    yay -S --noconfirm kitty wofi hyprshot-git swaync nemo hyprpaper-git playerctl getnf rofi hyprlock-git wl-clipboard clipman zed visual-studio-code-bin pavucontrol easyeffects spotify orchis-theme-git nwg-look swaync hyprpolkitagent-git
     yay -Syu --noconfirm # Update all packages
 }
 
