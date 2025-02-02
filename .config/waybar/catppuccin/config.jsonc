@@ -39,11 +39,13 @@
     "memory": {
     "interval": 3,
     "format": "{}%  ",
+    "on-click": "kitty htop",
     "max-length": 10
     },
     "cpu": {
     "interval": 3,
     "format": "{}%  ",
+    "on-click": "kitty htop",
     "max-length": 10
     },
     "battery": {
