@@ -25,6 +25,6 @@ case $choice in
 esac
 '
 
-pkill -USR1 waybar
+pkill waybar
 sleep 1
 waybar &
