@@ -1,0 +1,83 @@
+@import "mocha.css";
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 17px;
+  min-height: 0;
+}
+
+#waybar {
+  background: black;
+  color: black;
+  margin: 0px 5px;
+}
+
+#window {
+  background-color: @black;
+  color: @white;
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#workspaces {
+  background-color: @black;
+}
+
+#workspaces button {
+  color: @gray;
+  border-radius: 0rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.urgent {
+  color: @red;
+  border-radius: 0rem;
+}
+
+#workspaces button.active {
+  color: @white;
+  border-radius: 0rem;
+  border-bottom: 3px solid @white;
+}
+
+#workspaces button.focused {
+  color: @white;
+  border-radius: 0rem;
+  border-bottom: 3px solid @white;
+}
+
+#workspaces button.empty {
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 0rem;
+}
+
+#network,
+#cpu,
+#tray,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-quit,
+#custom-reboot,
+#custom-notification,
+#custom-power,
+#memory {
+  background-color: @black;
+  color: @white;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+#cpu {
+  margin-left: 0.5rem;
+}
+
+#memory {
+  margin-left: 1.5rem;
+}

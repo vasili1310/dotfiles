@@ -1,0 +1,129 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["hyprland/workspaces", "memory", "cpu"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray", "custom/notification", "group/group-power"], // "custom/lock", "custom/power"],
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": 10
+        },
+        "format": "{icon}",
+	"on-click": "activate",
+        "format-icons": {
+		"1": "0x1",
+		"2": "0x2",
+		"3": "0x3",
+		"4": "0x4",
+		"5": "0x5",
+		"6": "0x6",
+		"7": "0x7",
+		"8": "0x8",
+		"9": "0x9",
+		"10": "0xa"
+//   	 	"urgent": "",
+//  	        "active": "",
+//  	        "default": ""
+        }
+   },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%)  ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
+    "format-disconnected": "Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+    "tooltip-format-ethernet": "{ifname}  ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+    },
+    "memory": {
+    "interval": 3,
+    "format": "{}%  ",
+    "max-length": 10
+    },
+    "cpu": {
+    "interval": 3,
+    "format": "{}%  ",
+    "max-length": 10
+    },
+    "battery": {
+    "bat": "BAT0",
+    "interval": 3,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "max-length": 25
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Europe/Athens",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": " {:%d/%m/%Y}",
+        "format": "  {:%H:%M}"
+    },
+    "custom/lock": {
+        "tooltip": "Lock the computer",
+        "on-click": "hyprlock &",
+        "format": ""
+    },
+    "custom/power": {
+        "tooltip": "Reboot the computer",
+        "on-click": "reboot",
+        "format": "⏻"
+    },
+    "group/group-power": {
+    "orientation": "inherit",
+    "drawer": {
+        "transition-duration": 500,
+        "children-class": "not-power",
+        "transition-left-to-right": false
+    },
+    "modules": [
+        "custom/power", // First element is the "group leader" and won't ever be hidden
+        "custom/quit",
+        "custom/lock",
+        "custom/reboot"
+    ]
+    },
+    "custom/quit": {
+        "format": "󰗼 ",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/lock": {
+        "format": "󰍁 ",
+        "tooltip": false,
+        "on-click": "hyprlock"
+    },
+    "custom/reboot": {
+        "format": "󰜉 ",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/power": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "systemctl poweroff"
+    },
+    "custom/notification": {
+	"format": " ",
+	"tooltip": "Click to show notifications", 
+	"on-click": "swaync-client -t"
+    }
+}
