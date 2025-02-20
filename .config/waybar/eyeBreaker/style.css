@@ -7,29 +7,33 @@
 }
 
 #waybar {
-  background: black;
-  color: black;
-  margin: 0px 5px;
+  background: white;
+  background-color: white;
+  border: 2px solid @blue;
+  color: @white;
+  margin: 5px 5px;
 }
 
 #window {
-  background-color: @black;
-  color: @white;
+  background-color: @white;
+  color: @blue;
   margin: 5px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 window#waybar.empty #window {
-  background-color: transparent;
+  background-color: @white;
 }
 
 #workspaces {
-  background-color: @black;
+  background-color: @white;
+  border-radius: 1rem;
+  margin: 2px;
 }
 
 #workspaces button {
-  color: @gray;
+  color: @green;
   border-radius: 0rem;
   padding: 0.4rem;
 }
@@ -40,19 +44,19 @@ window#waybar.empty #window {
 }
 
 #workspaces button.active {
-  color: @white;
+  color: @blue;
   border-radius: 0rem;
-  border-bottom: 3px solid @white;
+  border-bottom: 3px solid @blue;
 }
 
 #workspaces button.focused {
-  color: @white;
+  color: @blue;
   border-radius: 0rem;
-  border-bottom: 3px solid @white;
+  border-bottom: 3px solid @blue;
 }
 
 #workspaces button.empty {
-  color: rgba(255, 255, 255, 0.5);
+  color: @sky;
   border-radius: 0rem;
 }
 
@@ -68,8 +72,8 @@ window#waybar.empty #window {
 #custom-notification,
 #custom-power,
 #memory {
-  background-color: @black;
-  color: @white;
+  background-color: @white;
+  color: @blue;
   margin-right: 1rem;
   margin-left: 1rem;
 }
