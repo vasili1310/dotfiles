@@ -7,6 +7,8 @@ echo "2) catpuccin w/ theme"
 echo "3) typecraft"
 echo "4) black and white w/o theme"
 echo "5) black and white w/ theme"
+echo "6) white eye breaker"
+echo "7) roman"
 read -p "Enter your choice: " choice
 
 case $choice in
@@ -50,6 +52,18 @@ case $choice in
 	cp ~/dotfiles/.config/hypr/blackNwhiteTheme/general.conf ~/.config/hypr/hyprland/
 	hyprctl reload
 	;;
+    6)
+  rm ~/.config/waybar/config.jsonc
+  rm ~/.config/waybar/style.css
+  cp ~/.config/waybar/eyeBreaker/style.css ~/.config/waybar/
+  cp ~/.config/waybar/eyeBreaker/config.jsonc ~/.config/waybar/
+  ;;
+    7)
+  rm ~/.config/waybar/config.jsonc
+  rm ~/.config/waybar/style.css
+  cp ~/.config/waybar/roman/config.jsonc ~/.config/waybar/
+  cp ~/.config/waybar/roman/style.css ~/.config/waybar/
+  ;;
     *)
         echo "Invalid choice"
         ;;
