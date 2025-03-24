@@ -1,9 +1,9 @@
 {
     "layer": "top",
     "position": "top",
-    "modules-left": ["memory", "cpu", "temperature"],
+    "modules-left": ["memory", "cpu", "temperature", "battery"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray", "custom/notification", "group/group-power"], // "custom/lock", "custom/power"],
+    "modules-right": ["pulseaudio", "network", "clock", "tray", "custom/notification", "group/group-power"], // "custom/lock", "custom/power"],
     "hyprland/workspaces": {
         "format": "{icon}",
       	"on-click": "activate",
